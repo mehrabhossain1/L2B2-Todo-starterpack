@@ -6,7 +6,7 @@ type TTodo = {
   description: string;
   isCompleted?: boolean;
 };
-// hello
+
 type TInitialState = {
   todos: TTodo[];
 };
@@ -18,7 +18,19 @@ const initialState: TInitialState = {
 export const todoSlice = createSlice({
   name: 'todo',
   initialState,
-  reducers: {},
+  reducers: {
+    // addTodo: (state, action) => {
+    //   state.todos.push(action.payload);
+    // },
+
+    // addTodo: (state, action) => {
+    //   state.todos.push(action.payload);
+    // },
+
+    addTodo: (state, action) => {
+      state.todos.push(action.payload);
+    },
+  },
 });
 
 export const { addTodo } = todoSlice.actions;
