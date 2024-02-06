@@ -18,6 +18,7 @@ const AddTodoModal = () => {
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
+    // hello
 
     const randomString = Math.random().toString(36).substring(2, 7);
 
