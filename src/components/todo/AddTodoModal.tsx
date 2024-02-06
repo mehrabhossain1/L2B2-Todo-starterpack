@@ -18,7 +18,6 @@ const AddTodoModal = () => {
 
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // hello
 
     const randomString = Math.random().toString(36).substring(2, 7);
 
@@ -43,6 +42,7 @@ const AddTodoModal = () => {
             Add your tasks that you want to finish.
           </DialogDescription>
         </DialogHeader>
+
         <form onSubmit={onSubmit}>
           <div className="grid gap-4 py-4">
             <div className="grid grid-cols-4 items-center gap-4">
