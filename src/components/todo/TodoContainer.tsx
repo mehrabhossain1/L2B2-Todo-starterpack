@@ -1,10 +1,13 @@
+import { clearTodos } from '@/redux/features/todoSlice';
 import AddTodoModal from './AddTodoModal';
 import TodoCard from './TodoCard';
 import TodoFilter from './TodoFilter';
-import { useAppSelector } from '@/redux/hooks';
+import { useAppDispatch, useAppSelector } from '@/redux/hooks';
+import { Button } from '../ui/button';
 
 const TodoContainer = () => {
   // const [todos, setTodos] = useState({ data: [] });
+  const dispatch = useAppDispatch();
 
   const { todos } = useAppSelector((state) => state.todos);
   console.log(todos);
@@ -12,6 +15,9 @@ const TodoContainer = () => {
   return (
     <div>
       <div className="flex justify-between mb-5 ">
+        <Button variant={'destructive'} onClick={() => dispatch(clearTodos())}>
+          Clear all
+        </Button>
         <AddTodoModal />
         <TodoFilter />
       </div>
