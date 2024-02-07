@@ -29,8 +29,8 @@ const AddTodoModal = () => {
       title: task,
       description: description,
     };
-
     dispatch(addTodo(taskDetails));
+    console.log(taskDetails);
   };
 
   return (
