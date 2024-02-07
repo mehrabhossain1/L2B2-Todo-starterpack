@@ -15,6 +15,7 @@ const initialState: TInitialState = {
   todos: [],
 };
 // hellow comment
+// comment 2
 
 export const todoSlice = createSlice({
   name: 'todo',
