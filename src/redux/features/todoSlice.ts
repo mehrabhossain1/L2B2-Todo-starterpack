@@ -21,16 +21,8 @@ export const todoSlice = createSlice({
   name: 'todo',
   initialState,
   reducers: {
-    // addTodo: (state, action) => {
-    //   state.todos.push(action.payload);
-    // },
-
-    // addTodo: (state, action) => {
-    //   state.todos.push(action.payload);
-    // },
-
-    addTodo: (state, action) => {
-      state.todos.push(action.payload);
+    addTodo: (state, action: PayloadAction<TTodo>) => {
+      state.todos.push({ ...action.payload, isCompleted: false });
     },
   },
 });

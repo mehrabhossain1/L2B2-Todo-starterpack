@@ -30,8 +30,6 @@ const AddTodoModal = () => {
       description: description,
     };
 
-    // dispatch(addTodo(taskDetails));
-    // dispatch(addTodo(taskDetails));
     dispatch(addTodo(taskDetails));
   };
 
